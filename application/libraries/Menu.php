@@ -14,38 +14,48 @@ class Menu {
                         "name"=>"我的信息",
                         "onclick"=>''
                     ),
-					"managerweek"=>array(
-                        "method"=>"href",
-                        "href"=>site_url('task/managerweek'),
-                        "name"=>"周会",
-                        "onclick"=>''
-                    ),
-					"pushtask"=>array(
-						"method"=>"href",
-						"href"=>site_url('task/pushtask'),
-						"name"=>"我发布的任务",
-						"onclick"=>''
-					),"duetask"=>array(
-                        "method"=>"href",
-                        "href"=>site_url('task/duetask'),
-                        "name"=>"我的任务",
-                        "onclick"=>''
-                    ),"reportertask"=>array(
-                        "method"=>"href",
-                        "href"=>site_url('task/reportertask'),
-                        "name"=>"下属任务",
-                        "onclick"=>''
-                    ),"managerweek"=>array(
-                        "method"=>"href",
-                        "href"=>site_url('task/managerweek'),
-                        "name"=>"周会",
-                        "onclick"=>''
-                    ),
+
                 ),
                 "default_menu"=>"index",
                 "name"=>'个人面板',
                 "icon"=>'glyphicon-dashboard',
             );
+			$this->all_menus["managerweek"]=array(
+	                "menu_array"=>array(
+						"managerweek"=>array(
+	                        "method"=>"href",
+	                        "href"=>site_url('task/managerweek'),
+	                        "name"=>"周会",
+	                        "onclick"=>''
+	                    ),
+	                ),
+	                "default_menu"=>"index",
+	                "name"=>'周报管理',
+	                "icon"=>'glyphicon-dashboard',
+	            );
+			$this->all_menus["task"]=array(
+	                "menu_array"=>array(
+						"pushtask"=>array(
+							"method"=>"href",
+							"href"=>site_url('task/pushtask'),
+							"name"=>"我发布的任务",
+							"onclick"=>''
+						),"duetask"=>array(
+	                        "method"=>"href",
+	                        "href"=>site_url('task/duetask'),
+	                        "name"=>"我的任务",
+	                        "onclick"=>''
+	                    ),"reportertask"=>array(
+	                        "method"=>"href",
+	                        "href"=>site_url('task/reportertask'),
+	                        "name"=>"下属任务",
+	                        "onclick"=>''
+	                    )
+	                ),
+	                "default_menu"=>"duetask",
+	                "name"=>'任务系统',
+	                "icon"=>'glyphicon-dashboard',
+	            );
 
         $this->all_menus["art"] = array(
             "menu_array"=>array(
